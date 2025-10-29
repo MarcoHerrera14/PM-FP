@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Campus Connections</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Page Title</title>
+
+    <style>
+    h1 {
+      color: black;
+    }
+
+    header 
+    {
+    background-color: darkgray; 
+    padding: 20px;
+    text-align: center;
+    }
+
+
+  </style>
 </head>
 <body>
+
+    <header>
+        <!--largest text, largest tag-->
+        <div id="title">
+        <h1>Welcome to EGT3414. Please keep conversations relavant and civil. </h1>
+</div>
+    </header>
+
+
+
+
     <!-- Your content goes here -->
-    <h1>Welcome to My Website</h1>
+    <h1>Welcome to our Website</h1>
     <p>Marco herrera 123456</p>
 </body>
 </html>
