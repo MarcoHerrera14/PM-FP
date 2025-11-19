@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Connections</title>
+  <style>
+
+    a:link, a:visited {
+   background-color: #e6e6e6;
+    color: black;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    display: inline-block;
+    min-width: 200px; 
+    
+}
+
+
+.course-box {
+      background-color: #e6e6e6;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+    }
+
+a:hover, a:active {
+  background-color: lightblue;
+}
+
+    /* General Page Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header*/
+    header {
+      background-color: darkgray;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: black;
+      margin: 0;
+    }
+
+    /* Two-column */
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      gap: 5px;
+    }
+
+    /* Left column */
+    .column-left {
+      flex: 1;
+      max-width: 33%;
+      box-sizing: border-box;
+      background-color: #f4f4f4;
+      padding: 10px;
+    }
+
+    /* Right column */
+    .column-right {
+      flex: 2;
+      max-width: 66%;
+      box-sizing: border-box;
+      background-color: #e8e8e8;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #3366cc;
+      padding: 15px;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* LEFT SIDEBAR - COURSE LIST */
+    .column-left h2 {
+      text-align: center;
+      margin-top: 0;
+    }
+
+    
+
+    /* MIDDLE CHAT AREA */
+    .column-middle {
+      width: 50%;
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .chat-bubble {
+      background-color: #f2f2f2;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 10px;
+      width: fit-content;
+    }
+
+    .chat-bubble.response {
+      background-color: #d8e6ff;
+      margin-left: auto;
+    }
+
+    /* UPLOAD BOX */
+    .upload-box {
+      width: 95%;
+      height: 120px;
+      background-color: #eaeaea;
+      border: 2px dashed #999;
+      margin: 20px auto;
+      border-radius: 8px;
+    }
+
+    /* RIGHT SIDE COLUMN (calendar + news) */
+    .column-right {
+      width: 25%;
+      background-color: white;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    /* CALENDAR */
+    .calendar {
+      background-color: white;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 90%;
+      margin: 0 auto 25px auto;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .calendar h3 {
+      margin: 5px 0;
+    }
+
+    .calendar table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .calendar th,
+    .calendar td {
+      padding: 6px;
+      text-align: center;
+      border: 1px solid #ddd;
+      font-size: 13px;
+    }
+
+    /* NEWS SECTION */
+    .news-box {
+      background-color: #fafafa;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .news-box h3 {
+      margin-top: 0;
+    }
+
+    /* Center the "Welcome to our Website" heading and footer */
+    .welcome-heading {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    footer {
+      background-color: darkgray;
+      padding: 20px;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<!--chat-->
+
+
+  <!-- HEADER -->
+  <header>
+    Welcome to the homepage for TEC 3414. Please keep discussions civil and relevant.
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <div class="container">
+    <!-- LEFT SIDEBAR -->
+    <div class="column-left">
+      <h2>Select Courses</h2>
+      
+      <a href="other.html" target="_blank">CIT 3453</a>
+      <div class="course-box">CIT 4140</div>
+      <div class="course-box">CIT 3923</div>
+      <div class="course-box">TEC 3414</div>
+    </div>
+
+    <!-- MIDDLE CHAT SECTION -->
+    <div class="column-middle">
+        <body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <div class="chat-message received">Hello! How can I assist you today?</div>
+        </div>
+        <div class="user-input">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+      
+    </div>
+
+    <!-- RIGHT SIDE: CALENDAR + NEWS -->
+    <div class="column-right">
+      <!-- CALENDAR -->
+      <div class="calendar">
+        <h3>November 2025</h3>
+        <table>
+          <tr>
+            <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+          </tr>
+          <tr><td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td></tr>
+          <tr><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr>
+          <tr><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td></tr>
+          <tr><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td></tr>
+          <tr><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+        </table>
+      </div>
+      <!-- NEWS BOX -->
+      <div class="news-box">
+        <h3>News</h3>
+        <p>No new updates at this time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Centered Welcome Message -->
+  <h2 class="welcome-heading">Welcome to our Website</h2>
+
+  <!-- Footer -->
+  <footer>
+    <p>Â©Campus Connections. Marco H, Jonasiah G, Kaitlyn F, Mariam, Sammule</p>
+  </footer>
+</body>
+</html>
